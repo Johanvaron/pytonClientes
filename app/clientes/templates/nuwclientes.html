@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+    <h1> Registro de Cliente </h1>
+    <form action="{{ url_for('clientes.registrar_cliente') }}" method="POST" novalidate>
+        {{ wtf.quick_form(form) }}
+        <button type="submit" class="btn btn-primary">Registrar Cliente</button>
+    </form>
+{% endblock %}
